@@ -40,10 +40,11 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
-}
+function kopyala(gelenArray){
 
+    return gelenArray;
+}
+console.log(kopyala(orijinalTatlar));
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,9 +57,16 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
-}
+function dizi25Cesitmi(çesitler){
+  if(çesitler.length == 25){
+    return true;
+  }       
+  else {
+    return false;
+  }
+  }
+  console.log(dizi25Cesitmi(orijinalTatlar));
+
 
 
 /* Görev 3:
@@ -74,11 +82,22 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle( tatlar, eklenecekTat){
+  var eklenecekTat = "Kakule";
+  tatlar.unshift (eklenecekTat);
+  return tatlar
 }
+console.log(cesitEkle(orijinalTatlar))
 
-
+/*function cesitEkle( tatlar function (tatlar2){
+  tatlar2.unshift ("Kakule");
+  return tatlar2;
+} console.log(tatlar2);
+)
+{
+return tatlar;
+}
+console.log(cesitEkle(orijinalTatlar));*/
 /* Cörev 4:
 
 Hoooppppalaa! orijinalTatlar dizisinde artık 26 aroma var! Göreviniz, dizinin sonundan bir öğeyi kaldırmaktır.
