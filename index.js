@@ -111,10 +111,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
-}
+function sonCesitiKaldir(orijinalTatlar){
 
+  orijinalTatlar.pop ();
+  return orijinalTatlar
+  }
+console.log(sonCesitiKaldir(orijinalTatlar));
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -127,9 +129,10 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(tatlar){
+return tatlar
 }
+console.log(indekstekiCesitiGetir(orijinalTatlar[3]));
 
 
 /* Görev 6:
@@ -147,9 +150,14 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
-}
+function ismeGoreCesitCikar(tatlar){
+ let yeniTatlar = tatlar.filter(function(x){
+    return x !== 'Tarçın'
+    }
+    );
+  return yeniTatlar
+  }
+console.log (ismeGoreCesitCikar(orijinalTatlar))
 
 
 /* Görev 7:
@@ -173,9 +181,16 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(orijinalTatlar, aranacakTatlar){
+  var newArray = [];  
+  for ( let s = 0; s< orijinalTatlar.length; s++){
+    if (orijinalTatlar[s].includes(aranacakTatlar)){
+      newArray.push(orijinalTatlar[s]);
 }
+}
+return newArray;
+}
+console.log(ismeGoreFiltrele(orijinalTatlar, 'Çikolata'));
 
 
 
